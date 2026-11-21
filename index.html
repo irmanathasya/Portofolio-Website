@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Irma Nathasya Br Ginting — Social Media & Graphic Design Enthusiast | UI/UX Designer</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
@@ -23,7 +24,11 @@
   --passive-border: #E0EFFF;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html, body {
   background: var(--bg);
@@ -35,24 +40,43 @@ html, body {
 }
 
 body { cursor: none; }
-a { color: inherit; text-decoration: none; cursor: none; }
-button { background: none; border: none; color: inherit; font-family: inherit; cursor: none; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: none;
+}
 
 /* Custom Cursor */
 .cursor {
-  position: fixed; top: 0; left: 0;
-  width: 16px; height: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
   border: 1.5px solid var(--accent);
   border-radius: 50%;
-  pointer-events: none; z-index: 9999;
+  pointer-events: none;
+  z-index: 9999;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
+
 .cursor.hover {
-  width: 48px; height: 48px;
+  width: 48px;
+  height: 48px;
   background: var(--accent-glow);
   border-color: transparent;
 }
+
 @media (hover: none) and (pointer: coarse) {
   body, a, button { cursor: auto; }
   .cursor { display: none; }
@@ -83,16 +107,21 @@ h1, h2, h3, .display {
   padding: 0 2rem;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .container { padding: 0 1.5rem; }
 }
 
 /* Section Headers */
 .section-header {
+  width: 100%;
   margin-bottom: 2.5rem;
   margin-top: 5rem;
+  text-align: center;
 }
+
 .section-header:first-of-type { margin-top: 0; }
+
 .section-header h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   display: inline-block;
@@ -102,6 +131,7 @@ h1, h2, h3, .display {
   background-clip: text;
   margin-bottom: 0.5rem;
 }
+
 .section-subtitle {
   font-size: 1rem;
   color: var(--text-dim);
@@ -116,6 +146,7 @@ h1, h2, h3, .display {
   margin-bottom: 4rem;
   text-align: left;
 }
+
 .cards-grid--1 {
   grid-template-columns: 1fr;
   max-width: 800px;
@@ -131,6 +162,7 @@ h1, h2, h3, .display {
   box-shadow: 0 10px 30px rgba(0, 123, 255, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 123, 255, 0.1);
@@ -145,6 +177,7 @@ h1, h2, h3, .display {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
+
 .card__title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -154,16 +187,19 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.75rem;
 }
+
 .card__title svg {
   width: 24px;
   height: 24px;
   color: var(--accent);
   flex-shrink: 0;
 }
+
 .card__list {
   list-style: none;
   margin-top: 1rem;
 }
+
 .card__list li {
   font-size: 15px;
   color: var(--text-dim);
@@ -174,7 +210,7 @@ h1, h2, h3, .display {
   gap: 0.75rem;
 }
 
-/* Dot Icon replacing checkmark */
+/* Dot Icon */
 .list-dot {
   width: 10px;
   height: 10px;
@@ -187,18 +223,30 @@ h1, h2, h3, .display {
 /* Nav */
 .nav {
   position: fixed;
-  top: 0; left: 0; width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
   padding: 1.2rem 3rem;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   background: rgba(230, 242, 255, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-@media (max-width: 768px) { .nav { padding: 1rem 1.5rem; } }
-.nav__menu { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+}
+
+.nav__menu {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .nav__menu a {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
@@ -209,15 +257,20 @@ h1, h2, h3, .display {
   letter-spacing: 0.05em;
   font-weight: 600;
 }
+
 .nav__menu a:hover { color: var(--text); }
+
 .nav__menu a::after {
   content: '';
   position: absolute;
-  bottom: -4px; left: 0;
-  width: 0; height: 2px;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: var(--gradient);
   transition: width 0.3s ease;
 }
+
 .nav__menu a:hover::after { width: 100%; }
 
 /* Hero */
@@ -231,6 +284,7 @@ h1, h2, h3, .display {
   padding-top: 8rem;
   position: relative;
 }
+
 .hero__title {
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
@@ -242,6 +296,7 @@ h1, h2, h3, .display {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .hero__subtitle {
   font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   color: var(--accent);
@@ -249,6 +304,7 @@ h1, h2, h3, .display {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
 }
+
 .hero__desc {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   color: var(--text-dim);
@@ -256,6 +312,7 @@ h1, h2, h3, .display {
   line-height: 1.7;
   margin-bottom: 2.5rem;
 }
+
 .hero__actions {
   display: flex;
   gap: 1rem;
@@ -263,6 +320,7 @@ h1, h2, h3, .display {
   justify-content: center;
   margin-bottom: 3rem;
 }
+
 .btn {
   padding: 0.9rem 1.8rem;
   font-family: 'Space Grotesk', sans-serif;
@@ -276,18 +334,22 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.5rem;
 }
+
 .btn--primary {
   background: var(--gradient);
   color: #fff;
 }
+
 .btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px var(--accent-glow);
 }
+
 .btn--outline {
   border: 1px solid var(--text);
   color: var(--text);
 }
+
 .btn--outline:hover {
   background: var(--text);
   color: var(--bg);
@@ -299,6 +361,7 @@ h1, h2, h3, .display {
   gap: 1.5rem;
   justify-content: center;
 }
+
 .social-box {
   width: 48px;
   height: 48px;
@@ -311,6 +374,7 @@ h1, h2, h3, .display {
   background: #fff;
   transition: all 0.3s ease;
 }
+
 .social-box:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -324,9 +388,14 @@ h1, h2, h3, .display {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+
 @media (max-width: 768px) {
-  .about__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
+
 .about__col h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -335,6 +404,7 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.5rem;
 }
+
 .about__col p {
   font-size: 0.95rem;
   line-height: 1.7;
@@ -350,11 +420,13 @@ h1, h2, h3, .display {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
+
 .edu__courses {
   font-size: 0.9rem;
   color: var(--text-dim);
   line-height: 1.6;
 }
+
 .edu__courses strong {
   display: block;
   margin-bottom: 0.5rem;
@@ -367,6 +439,7 @@ h1, h2, h3, .display {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+
 .tag {
   padding: 0.6rem 1.2rem;
   background: var(--passive-bg);
@@ -378,6 +451,7 @@ h1, h2, h3, .display {
   font-weight: 500;
   transition: all 0.3s ease;
 }
+
 .tag:hover {
   border-color: var(--accent);
   color: var(--accent);
@@ -388,6 +462,7 @@ h1, h2, h3, .display {
 .certs__list {
   list-style: none;
 }
+
 .certs__list li {
   font-size: 0.95rem;
   margin-bottom: 1rem;
@@ -397,6 +472,7 @@ h1, h2, h3, .display {
   align-items: flex-start;
   gap: 0.75rem;
 }
+
 .cert-icon {
   width: 20px;
   height: 20px;
@@ -409,6 +485,7 @@ h1, h2, h3, .display {
 .lang__list {
   list-style: none;
 }
+
 .lang__list li {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
@@ -419,6 +496,7 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.5rem;
 }
+
 .lang__list li::before {
   content: '•';
   color: var(--accent);
@@ -431,6 +509,7 @@ h1, h2, h3, .display {
   color: var(--text-dim);
   margin-bottom: 2.5rem;
 }
+
 .contact__grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -438,9 +517,14 @@ h1, h2, h3, .display {
   margin-bottom: 2.5rem;
   text-align: left;
 }
+
 @media (max-width: 768px) {
-  .contact__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
+
 .contact__col-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
@@ -449,6 +533,7 @@ h1, h2, h3, .display {
   margin-bottom: 1.2rem;
   display: block;
 }
+
 .contact__row {
   display: flex;
   flex-direction: column;
@@ -457,7 +542,12 @@ h1, h2, h3, .display {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
-.contact__row:last-child { border-bottom: none; margin-bottom: 0; }
+
+.contact__row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .contact__row a {
   font-size: 1rem;
   color: var(--text);
@@ -467,12 +557,15 @@ h1, h2, h3, .display {
   align-items: center;
   gap: 0.6rem;
 }
+
 .contact__row a:hover { color: var(--accent); }
+
 .contact__row svg {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
+
 .contact__loc-main {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
@@ -480,6 +573,7 @@ h1, h2, h3, .display {
   color: var(--text);
   margin-bottom: 0.5rem;
 }
+
 .contact__loc-sub {
   font-size: 0.9rem;
   color: var(--text-dim);
@@ -492,6 +586,7 @@ h1, h2, h3, .display {
   padding-top: 2rem;
   border-top: 1px solid var(--border);
 }
+
 .btn--large {
   width: 100%;
   max-width: 400px;
@@ -511,11 +606,11 @@ h1, h2, h3, .display {
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.76, 0, 0.24, 1), transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
+
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 </style>
 </head>
 
@@ -545,30 +640,45 @@ h1, h2, h3, .display {
 </nav>
 
 <div class="container">
+
   <!-- Hero -->
   <section class="hero">
     <h1 class="hero__title reveal">Irma Nathasya Br Ginting</h1>
-    <h2 class="hero__subtitle reveal">UI/UX Designer & Data Science Enthusiast</h2>
+    <h2 class="hero__subtitle reveal">Social Media & Graphic Design Enthusiast | UI/UX Designer</h2>
+
     <p class="hero__desc reveal">
-     I'm an Information Technology graduate with experience in Social Media Management and Graphic Design, and an interest in UI/UX Design and digital product development. Skilled in creating social media content, promotional materials, and managing publications through Meta Business Suite. Creative, detail-oriented, adaptable, and able to work both independently and collaboratively.
+      I'm an Information Technology graduate with experience in Social Media Management and Graphic Design, and an interest in UI/UX Design and digital product development. Skilled in creating social media content, promotional materials, and managing publications through Meta Business Suite. Creative, detail-oriented, adaptable, and able to work both independently and collaboratively.
     </p>
+
     <div class="hero__actions reveal">
       <a href="#work" class="btn btn--primary">View Projects →</a>
       <a href="#contact" class="btn btn--outline">Get In Touch</a>
     </div>
-    
+
     <div class="hero__socials reveal">
-      <a href="https://github.com/irmanathasya" target="_blank" class="social-box" aria-label="GitHub">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.295-.54-1.494.105-3.116 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.622.24 2.821.12 3.116.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.563C20.565 21.917 24 17.502 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
+      <a href="https://github.com/irmanathasya" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.295-.54-1.494.105-3.116 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.622.24 2.821.12 3.116.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.563C20.565 21.917 24 17.502 24 12.292 24 5.78 18.627.5 12 .5z"/>
+        </svg>
       </a>
-      <a href="https://www.linkedin.com/in/irma-nathasya-br-ginting-616455242/" target="_blank" class="social-box" aria-label="LinkedIn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+
+      <a href="https://www.linkedin.com/in/irma-nathasya-br-ginting-616455242/" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+        </svg>
       </a>
+
       <a href="mailto:irmanathasyag@gmail.com" class="social-box" aria-label="Email">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
       </a>
-      <a href="tel:+6281265544112" class="social-box" aria-label="Phone">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+
+      <a href="tel:+6281949360576" class="social-box" aria-label="Phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
       </a>
     </div>
   </section>
@@ -578,14 +688,16 @@ h1, h2, h3, .display {
     <h2>About Me</h2>
     <p class="section-subtitle">A dedicated designer bridging the gap between user needs and impactful digital solutions.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <div class="about__grid">
         <div class="about__col">
           <h3>My Story</h3>
-          <p>I am an Information Technology graduate from Universitas Sumatera Utara with a GPA of 3.76/4.00. My academic journey culminated in an independent research project developing a Vitiligo Detection System using K-Means and Convolutional Neural Network (CNN).</p>
+          <p>I'm an Information Technology graduate from Universitas Sumatera Utara with a GPA of 3.76/4.00. My academic journey culminated in an independent research project developing a Vitiligo Detection System using K-Means and Convolutional Neural Network (CNN).</p>
           <p>I have professional experience in social media management, digital content creation, visual design, and copywriting. My responsibilities include developing monthly content strategies, designing Instagram posts and promotional materials, creating advertising visuals, and managing social media content. In addition, I have a strong interest in UI/UX design and digital product development, with skills in creating wireframes, user flows, and interactive prototypes.</p>
         </div>
+
         <div class="about__col">
           <h3>What Drives Me</h3>
           <p>I have a strong interest in UI/UX design, digital product development, and creative content creation. I enjoy collaborating with others, exploring new ideas, and combining creativity with technology to develop engaging and meaningful digital experiences.</p>
@@ -600,16 +712,22 @@ h1, h2, h3, .display {
     <h2>Education</h2>
     <p class="section-subtitle">My academic background and relevant coursework.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <div class="card__head">
         <div class="card__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
           Bachelor of Information Technology
         </div>
         <div class="label">Sept 2020 - Nov 2025</div>
       </div>
+
       <div class="label" style="margin-bottom: 1.5rem;">Universitas Sumatera Utara - Medan, Indonesia</div>
+
       <div class="edu__body">
         <div class="edu__gpa">GPA: 3.76 / 4.00</div>
         <div class="edu__courses">
@@ -625,59 +743,51 @@ h1, h2, h3, .display {
     <h2>Projects</h2>
     <p class="section-subtitle">Showcase of my work and academic projects.</p>
   </div>
+
   <div class="cards-grid reveal">
+
     <!-- Project 1 -->
     <div class="card">
       <div class="card__head">
         <div class="card__title">Vitiligo Detection System</div>
         <div class="label">2025</div>
       </div>
+
       <div class="label" style="margin-bottom: 1rem; color: var(--accent);">Solo Research Project – Thesis</div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Designed and developed an intelligent skin lesion classification system to distinguish vitiligo from non-vitiligo images.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Implemented K-Means clustering to segment depigmented regions as a preprocessing stage for improved model focus.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Built and trained a CNN architecture on 400 labeled dermal images covering vitiligo, healthy skin, and similar white patch conditions.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Evaluated system performance using accuracy metrics, confusion matrix analysis, and loss comparison.
-        </li>
+        <li><span class="list-dot"></span>Designed and developed an intelligent skin lesion classification system to distinguish vitiligo from non-vitiligo images.</li>
+        <li><span class="list-dot"></span>Implemented K-Means clustering to segment depigmented regions as a preprocessing stage for improved model focus.</li>
+        <li><span class="list-dot"></span>Built and trained a CNN architecture on 400 labeled dermal images covering vitiligo, healthy skin, and similar white patch conditions.</li>
+        <li><span class="list-dot"></span>Evaluated system performance using accuracy metrics, confusion matrix analysis, and loss comparison.</li>
       </ul>
     </div>
+
     <!-- Project 2 -->
     <div class="card">
       <div class="card__head">
         <div class="card__title">MaRu (Mari Urut)</div>
         <div class="label">2023</div>
       </div>
+
       <div class="label" style="margin-bottom: 1rem; color: var(--accent);">UI/UX Prototype</div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Developed a mobile app prototype in Figma and Draw.io to enable users to locate trusted local massage services, select treatment types, and book scheduled sessions.
-        </li>
+        <li><span class="list-dot"></span>Developed a mobile app prototype in Figma and Draw.io to enable users to locate trusted local massage services, select treatment types, and book scheduled sessions.</li>
       </ul>
     </div>
+
     <!-- Project 3 -->
     <div class="card">
       <div class="card__head">
         <div class="card__title">Alumni Connect</div>
         <div class="label">2023</div>
       </div>
+
       <div class="label" style="margin-bottom: 1rem; color: var(--accent);">UI/UX Prototype</div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Designed a prototype platform for alumni to stay engaged with the university, receive campus news, and view scheduled events via a built-in calendar.
-        </li>
+        <li><span class="list-dot"></span>Designed a prototype platform for alumni to stay engaged with the university, receive campus news, and view scheduled events via a built-in calendar.</li>
       </ul>
     </div>
   </div>
@@ -687,7 +797,9 @@ h1, h2, h3, .display {
     <h2>Work Experience</h2>
     <p class="section-subtitle">My professional journey and internships.</p>
   </div>
+
   <div class="cards-grid reveal">
+
     <!-- Job 1 -->
     <div class="card">
       <div class="card__head">
@@ -697,29 +809,16 @@ h1, h2, h3, .display {
         </div>
         <div class="label">July 2026 - Now</div>
       </div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Created visual designs for promotional purposes, including logos, posters, brochures, packaging, and digital and print marketing materials.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Developed social media content, including graphics, infographics, short-form videos, and design templates for marketing campaigns.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Wrote captions and copywriting for social media posts, ensuring consistency with the brand identity and communication style.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Managed social media content scheduling and publishing to maintain consistent online engagement.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Collaborated with the team to understand design requirements, incorporate feedback, and make revisions as needed.
-        </li>
+        <li><span class="list-dot"></span>Created visual designs for promotional purposes, including logos, posters, brochures, packaging, and digital and print marketing materials.</li>
+        <li><span class="list-dot"></span>Developed social media content, including graphics, infographics, short-form videos, and design templates for marketing campaigns.</li>
+        <li><span class="list-dot"></span>Wrote captions and copywriting for social media posts, ensuring consistency with the brand identity and communication style.</li>
+        <li><span class="list-dot"></span>Managed social media content scheduling and publishing to maintain consistent online engagement.</li>
+        <li><span class="list-dot"></span>Collaborated with the team to understand design requirements, incorporate feedback, and make revisions as needed.</li>
       </ul>
     </div>
+
     <!-- Job 2 -->
     <div class="card">
       <div class="card__head">
@@ -729,19 +828,11 @@ h1, h2, h3, .display {
         </div>
         <div class="label">Mar 2023 - Jun 2023</div>
       </div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Digitized 30 city maps across Medan for land administration records.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Performed labeling and annotation work for the map catalogue.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Supported day-to-day public administration duties at the land office.
-        </li>
+        <li><span class="list-dot"></span>Digitized 30 city maps across Medan for land administration records.</li>
+        <li><span class="list-dot"></span>Performed labeling and annotation work for the map catalogue.</li>
+        <li><span class="list-dot"></span>Supported day-to-day public administration duties at the land office.</li>
       </ul>
     </div>
   </div>
@@ -751,7 +842,9 @@ h1, h2, h3, .display {
     <h2>Leadership & Organization</h2>
     <p class="section-subtitle">My roles in community and campus organizations.</p>
   </div>
+
   <div class="cards-grid reveal">
+
     <!-- Role 1 -->
     <div class="card">
       <div class="card__head">
@@ -761,21 +854,14 @@ h1, h2, h3, .display {
         </div>
         <div class="label">2023 - 2025</div>
       </div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Organized routine weekly sales activities and collected annual dues.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Coordinated with the church treasurer to ensure proper administration.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Maintained transparency and accountability for youth ministry programs.
-        </li>
+        <li><span class="list-dot"></span>Organized routine weekly sales activities and collected annual dues.</li>
+        <li><span class="list-dot"></span>Coordinated with the church treasurer to ensure proper administration.</li>
+        <li><span class="list-dot"></span>Maintained transparency and accountability for youth ministry programs.</li>
       </ul>
     </div>
+
     <!-- Role 2 -->
     <div class="card">
       <div class="card__head">
@@ -785,22 +871,15 @@ h1, h2, h3, .display {
         </div>
         <div class="label">May 2023 - Jul 2023</div>
       </div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Created end-to-end UI & UX designs for a local massage booking app.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Conducted market research to validate demand for trusted services.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Built the startup from concept to a testable product for real users.
-        </li>
+        <li><span class="list-dot"></span>Created end-to-end UI & UX designs for a local massage booking app.</li>
+        <li><span class="list-dot"></span>Conducted market research to validate demand for trusted services.</li>
+        <li><span class="list-dot"></span>Built the startup from concept to a testable product for real users.</li>
       </ul>
     </div>
-  <!-- Role 3 -->
+
+    <!-- Role 3 -->
     <div class="card">
       <div class="card__head">
         <div>
@@ -809,19 +888,11 @@ h1, h2, h3, .display {
         </div>
         <div class="label">2021 - 2022</div>
       </div>
+
       <ul class="card__list">
-        <li>
-          <span class="list-dot"></span>
-          Managed and organized photo and video documentation for student events.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Designed visual assets for event materials and social media campaigns.
-        </li>
-        <li>
-          <span class="list-dot"></span>
-          Developed and scheduled content for event publications across channels.
-        </li>
+        <li><span class="list-dot"></span>Managed and organized photo and video documentation for student events.</li>
+        <li><span class="list-dot"></span>Designed visual assets for event materials and social media campaigns.</li>
+        <li><span class="list-dot"></span>Developed and scheduled content for event publications across channels.</li>
       </ul>
     </div>
   </div>
@@ -831,6 +902,7 @@ h1, h2, h3, .display {
     <h2>Technical Skills</h2>
     <p class="section-subtitle">Tools and technologies I work with.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <div class="tags">
@@ -847,12 +919,12 @@ h1, h2, h3, .display {
         <span class="tag">Draw.io</span>
         <span class="tag">Adobe Illustrator</span>
         <span class="tag">Canva</span>
-        <span class="tag">Capcut</span>
+        <span class="tag">CapCut</span>
         <span class="tag">AutoCAD</span>
+        <span class="tag">Data Analysis</span>
         <span class="tag">Microsoft Office (Word, Excel, PowerPoint)</span>
         <span class="tag">Google Workspace (Docs, Sheets)</span>
-        <span class="tag">Data Analysis</span>
-        <span class="tag"> Meta Business Suite (Content Scheduling, Publishing, Social Media Management)</span
+        <span class="tag">Meta Business Suite (Content Scheduling, Publishing, Social Media Management)</span>
       </div>
     </div>
   </div>
@@ -862,6 +934,7 @@ h1, h2, h3, .display {
     <h2>Soft Skills</h2>
     <p class="section-subtitle">My interpersonal and professional traits.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <div class="tags">
@@ -881,19 +954,31 @@ h1, h2, h3, .display {
     <h2>Certifications</h2>
     <p class="section-subtitle">Achievements and recognized credentials.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <ul class="certs__list">
         <li>
-          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+          </svg>
           Internship Certificate – Kementerian ATR/BPN (Kantor Pertanahan Kota Medan)
         </li>
+
         <li>
-          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+          </svg>
           Final Project Award Certificate - 3rd Runner up categories of Innovative and Creative Ideas
         </li>
+
         <li>
-          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+          </svg>
           Certificate of Achievement - Interaction Design Course
         </li>
       </ul>
@@ -905,6 +990,7 @@ h1, h2, h3, .display {
     <h2>Languages</h2>
     <p class="section-subtitle">Languages I speak and understand.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <ul class="lang__list">
@@ -919,47 +1005,77 @@ h1, h2, h3, .display {
     <h2>Get In Touch</h2>
     <p class="section-subtitle">Let's build something great together.</p>
   </div>
+
   <div class="cards-grid cards-grid--1 reveal">
     <div class="card">
       <div class="contact__grid">
+
         <div class="contact__col">
           <h3 class="contact__col-title">Contact Information</h3>
+
           <div class="contact__row">
             <span class="label">Email</span>
             <a href="mailto:irmanathasyag@gmail.com">
-              <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
               irmanathasyag@gmail.com
             </a>
           </div>
+
           <div class="contact__row">
             <span class="label">Phone</span>
-            <a href="tel:+62 819 4936 0576">
-              <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:+6281949360576">
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
               +62 819 4936 0576
             </a>
           </div>
+
           <div class="contact__row">
             <span class="label">GitHub</span>
-            <a href="https://github.com/irmanathasya" target="_blank">
-              <svg viewBox="0 0 24 24" fill="url(#grad-stroke)"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.295-.54-1.494.105-3.116 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.622.24 2.821.12 3.116.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.563C20.565 21.917 24 17.502 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
+            <a href="https://github.com/irmanathasya" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="url(#grad-stroke)">
+                <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.295-.54-1.494.105-3.116 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.622.24 2.821.12 3.116.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.563C20.565 21.917 24 17.502 24 12.292 24 5.78 18.627.5 12 .5z"/>
+              </svg>
               github.com/irmanathasya
             </a>
           </div>
+
           <div class="contact__row">
             <span class="label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/irma-nathasya-br-ginting-616455242/" target="_blank">
-              <svg viewBox="0 0 24 24" fill="url(#grad-stroke)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            <a href="https://www.linkedin.com/in/irma-nathasya-br-ginting-616455242/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="url(#grad-stroke)">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+              </svg>
               linkedin.com/in/irma-nathasya-br-ginting
             </a>
           </div>
+
+          <!-- Google Drive Portfolio -->
+          <div class="contact__row">
+            <span class="label">Portfolio</span>
+            <a href="https://drive.google.com/drive/folders/1Cr4ZwriFDZqZsI_3Wa_zJ5P9fYiUM-EU?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 3h7v7"></path>
+                <path d="M10 14L21 3"></path>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              </svg>
+              Google Drive Portfolio
+            </a>
+          </div>
         </div>
+
         <div class="contact__col">
           <h3 class="contact__col-title">Location</h3>
           <p class="contact__loc-main">Tangerang Selatan, Banten</p>
           <p class="contact__loc-sub">I am based in Tangerang Selatan, Banten, and open to remote opportunities and collaborations for UI/UX design and digital product projects worldwide.</p>
         </div>
+
       </div>
-      
+
       <div class="contact__action">
         <a href="mailto:irmanathasyag@gmail.com" class="btn btn--primary btn--large">Send me an email</a>
       </div>
@@ -990,12 +1106,14 @@ document.addEventListener('DOMContentLoaded', () => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
+
     requestAnimationFrame(raf);
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
+
         if (target) {
           lenis.scrollTo(target, { offset: -50 });
         }
@@ -1005,9 +1123,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Custom Cursor Logic
   const cursor = document.getElementById('cursor');
-  if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+
+  if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches && typeof gsap !== 'undefined') {
     window.addEventListener('mousemove', (e) => {
-      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.3, ease: 'power2.out' });
+      gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.3,
+        ease: 'power2.out'
+      });
     });
 
     document.querySelectorAll('a, button').forEach(el => {
@@ -1024,7 +1148,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
 
   document.querySelectorAll('.reveal').forEach(el => {
     observer.observe(el);
